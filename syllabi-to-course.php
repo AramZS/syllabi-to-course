@@ -21,9 +21,8 @@ if ( $query->have_posts() ) : ?>
 		wp_update_post( $my_post );	
 		
 	endwhile; wp_reset_postdata();
-	<!-- show pagination here -->
-<?php else : ?>
-	<!-- show 404 error here -->
-<?php endif;
+else :
+
+endif;
 
 }
