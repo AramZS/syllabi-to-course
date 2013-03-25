@@ -4,7 +4,10 @@ Plugin Name: Convert syllabi to course CPTs
 Description: A bulk conversion utility for specific post types.
 License: GPL2
 */ 
- 
+
+add_action('init', 'kiss_syllabus_to_course');
+
+function kiss_syllabus_to_course() { 
 $query = new WP_Query( array( 'post_type' => 'syllabus') );
  
 if ( $query->have_posts() ) : ?>
@@ -21,5 +24,6 @@ if ( $query->have_posts() ) : ?>
 	<!-- show pagination here -->
 <?php else : ?>
 	<!-- show 404 error here -->
-<?php endif; ?>
-?>
+<?php endif;
+
+}
